@@ -11,4 +11,6 @@ public interface EmployeeService {
 
     List<Employee> findAll();
 
+    Employee addEmployee(Employee employee);
+
 }

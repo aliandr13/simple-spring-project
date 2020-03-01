@@ -8,14 +8,15 @@
 
     <http auto-config="true">
         <intercept-url pattern="/" access="permitAll"/>
-        <intercept-url pattern="/employees" access="hasAnyRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/employees/**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')"/>
+        <intercept-url pattern="/api/**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')"/>
     </http>
 
 
     <!--    <beans:bean id="authService" class="by.it.spring.example.service.AuthenticationService"/>-->
 
     <user-service id="detailsManager">
-        <user name="alex" authorities="IS_AUTHENTICATED_FULLY" password="{noop} pass"/>
+        <user name="alex" authorities="ROLE_USER" password="{noop} pass"/>
         <user name="admin" authorities="ROLE_ADMIN" password="{noop}pass"/>
     </user-service>
 

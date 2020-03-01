@@ -5,7 +5,11 @@
 </head>
 <body>
 <h1>Home Page</h1>
+<h3>Controllers:</h3>
 <a href="${pageContext.request.contextPath}/welcome">Welcome</a><br/>
-<a href="${pageContext.request.contextPath}/employees">Employees</a>
+<a href="${pageContext.request.contextPath}/employees">Employee</a><br/>
+<a href="${pageContext.request.contextPath}/employees/add">Add new Employee</a><br/>
+<h3>REST API:</h3>
+<a href="${pageContext.request.contextPath}/api/employees">Employees</a>
 </body>
 </html>
